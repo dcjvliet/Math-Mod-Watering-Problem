@@ -1,5 +1,4 @@
 from matplotlib import pyplot as plt
-import time
 
 
 WIDTH = 200
@@ -43,7 +42,7 @@ x = range(5, 20)
 plt.plot(x, stds, marker='o')
 
 plt.xlabel("Number of Nozzles")
-plt.ylabel("Standard Deviation")
+plt.ylabel("Standard Deviation of Water Distribution (uniformity)")
 plt.xticks(x, rotation='horizontal')
 plt.grid(True)
 

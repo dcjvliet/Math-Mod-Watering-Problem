@@ -47,8 +47,7 @@ x = range(100)
 plt.plot(x, stds, marker='o')
 
 plt.xlabel("Trial")
-plt.ylabel("Standard Deviation")
+plt.ylabel("Standard Deviation in Water Distribution (uniformity)")
 plt.grid(True)
 
-plt.savefig('random_locations.png')
 plt.show()

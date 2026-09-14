@@ -46,8 +46,8 @@ plt.imshow(
     vmax=max(distribution)
 )
 
-plt.xlabel("X")
-plt.ylabel("Y")
+plt.xlabel("Width of field (ft)")
+plt.ylabel("Length of field (ft)")
 plt.xlim(0, 200)
 plt.ylim(0, LENGTH)
 plt.colorbar(label="Amount of Water (arbitrary units)")

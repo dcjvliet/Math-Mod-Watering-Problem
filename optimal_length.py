@@ -1,5 +1,4 @@
 from matplotlib import pyplot as plt
-import time
 
 
 WIDTH = 200
@@ -44,14 +43,13 @@ x = range(150, 221)
 
 plt.plot(x, minimum_stds, marker='o')
 
-plt.xlabel("X")
-plt.ylabel("Standard Deviation")
+plt.xlabel("Length of Pipe (ft)")
+plt.ylabel("Standard Deviation in Water Distribution (uniformity)")
 plt.xticks(x, rotation='vertical')
 plt.grid(True)
 
-plt.savefig('optimal_length.png')
 plt.show()
 
 
 
-# 219ft with 15 nozzles
+# 219ft with 15 nozzles is optimal
