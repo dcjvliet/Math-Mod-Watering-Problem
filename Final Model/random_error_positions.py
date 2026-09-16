@@ -6,7 +6,7 @@ WIDTH = 200
 LENGTH = 400
 STEP_SIZE = 0.1
 GRID = [[0 for _ in range(WIDTH)] for _ in range(LENGTH)]
-NUM_NOZZLES = 15
+NUM_NOZZLES = 19
 NOZZLE_RADIUS = 25
 
 
@@ -22,7 +22,7 @@ def std(distribution):
 
 stds = []
 for trial in range(100):
-    NOZZLE_CENTERS = [219 / (NUM_NOZZLES - 1) * i - (219 - 200) / 2 + random.uniform(-0.25, 0.25) for i in range(NUM_NOZZLES)]
+    NOZZLE_CENTERS = [220 / (NUM_NOZZLES - 1) * i - (220 - 200) / 2 + random.uniform(-0.25, 0.25) for i in range(NUM_NOZZLES)]
     distribution = []
     for i in range(round(WIDTH / STEP_SIZE)):
         x_cord = i * STEP_SIZE

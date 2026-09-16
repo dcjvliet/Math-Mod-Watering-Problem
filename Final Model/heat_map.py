@@ -6,7 +6,7 @@ WIDTH = 200
 LENGTH = 400
 STEP_SIZE = 0.1
 GRID = [[0 for _ in range(WIDTH)] for _ in range(LENGTH)]
-NUM_NOZZLES = 15
+NUM_NOZZLES = 19
 NOZZLE_RADIUS = 25
 
 
@@ -19,7 +19,7 @@ def std(distribution):
     variance = sum((x - mean) ** 2 for x in distribution) / len(distribution)
     return variance ** 0.5
 
-NOZZLE_CENTERS = [219 / (NUM_NOZZLES - 1) * i - (219 - 200) / 2 for i in range(NUM_NOZZLES)]
+NOZZLE_CENTERS = [220 / (NUM_NOZZLES - 1) * i - (220 - 200) / 2 for i in range(NUM_NOZZLES)]
 distribution = []
 for i in range(round(WIDTH / STEP_SIZE)):
     x_cord = i * STEP_SIZE
@@ -27,7 +27,7 @@ for i in range(round(WIDTH / STEP_SIZE)):
     for center in NOZZLE_CENTERS:
         distance = abs(x_cord - center)
         if distance <= NOZZLE_RADIUS:
-            total_water += chord_length(distance)
+            total_water += chord_length(distance) * (1 - distance / (2 * NOZZLE_RADIUS))
 
     distribution.append(total_water)
 
