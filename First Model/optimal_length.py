@@ -50,6 +50,8 @@ plt.grid(True)
 
 plt.show()
 
+print(minimum_stds[-2])
+print(minimum_stds[-1])
 
 
 # 219ft with 15 nozzles is optimal
